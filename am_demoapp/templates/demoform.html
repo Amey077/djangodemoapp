@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registeration Form</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'js/Bootstrap.js' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="p1">Form Submitted Successfully...</p>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+	var modal = document.getElementById("myModal");
+	var btn = document.getElementById("btn1");
+	var span = document.getElementsByClassName("close")[0];
+
+	span.onclick = function() 
+	{
+ 		 modal.style.display = "none";
+	}
+
+
+	window.onclick = function(event) 
+	{
+  		if (event.target == modal) 
+  			{
+    			modal.style.display = "none";
+  			}
+	}
+
+	function func() 
+	{
+  		modal.style.display = "block";
+	}
+
+</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<h1 class="text-left">Want to be a part of our Organisation</h1>
+				<p class="text-left">
+					Are you a Final Year student, looking for a job. Want to be a part of our Organisation? <br>If Yes, then fill out the Student Registeration Form and we will respond to you as soon as possible.</p> 
+				</p>
+			</div>
+
+			<div class="col-md-5">
+				<div class="row">
+					<div class="col-md-6">
+						<h3 class="text-left">Student Registeration Form</h3>
+					</div>
+					<div class="col-md-6">
+						<span class="glyphicon glyphicon-pencil"></span> </div>
+				</div>
+				<hr>
+
+				<div class="row">
+					<label class="label col-md-2 control-label">Name</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" name="name" placeholder="Enter your Name" required="">
+					</div>
+				</div>
+
+				<div class="row">
+					<label class="label col-md-2 control-label">Email</label>
+					<div class="col-md-10">
+						<input type="email" class="form-control" name="Email" placeholder="Enter your Email">
+					</div>
+				</div>
+
+				<div class="row">
+					<label class="label col-md-2 control-label">Password</label>
+					<div class="col-md-10">
+						<input type="password" class="form-control" name="password" placeholder="Enter your Password">
+						<input type="checkbox"> <small>Remember me</small>
+					</div>
+				</div>
+
+				<div class="row">
+					<label class="label col-md-2 control-label">City</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" name="city" placeholder="City">
+					</div>
+				</div>
+
+				<div class="row">
+					<label class="label col-md-2 control-label">Address</label>
+					<div class="col-md-10">
+						<textarea class="form-control" placeholder="Address"></textarea>
+					</div>
+				</div>
+
+				<div class="row">
+					<label class="label col-md-2 control-label">About <br> Yourself</label>
+					<div class="col-md-10">
+						<textarea class="form-control" placeholder="Tell us About Yourself..."></textarea>
+					</div>
+				</div>
+
+
+				<div>
+					<a href="#"><div class="btn btn-info" id="btn1" onclick="func()">Submit</div></a>
+					<a href="#"><div class="btn btn-warning">Cancel</div></a>
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+<footer class="page-footer font-small blue">
+<br>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Amey </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+
+</body>
+</html>
